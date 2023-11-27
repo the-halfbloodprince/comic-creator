@@ -21,6 +21,8 @@ Task submission for Dashtoons Product Engineer role.
 - **Bonus Features (Optional):**
     - [ ] Ability to add speech bubbles or text annotations on the images.
 
+- [ ] **Refactors**
+
 ### **Deliverables:**
 
 - [x] A deployed web app on a URL is best. If thats not possible then submit a github URL with code.
