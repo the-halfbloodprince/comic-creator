@@ -20,12 +20,6 @@ const DataView: FC<Props> = ({
                 width={512}
                 height={512}
             />
-			{/* <img
-				ref={imageRef}
-				id="generated-image"
-				src={generated_image_src}
-				alt=""
-			/> */}
 			{/* <Input buttonOnClick={fetchData} /> */}
 		</div>
 	);
