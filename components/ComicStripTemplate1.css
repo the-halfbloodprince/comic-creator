@@ -1,0 +1,20 @@
+@media only screen and (min-width: 1024px) {
+    .panel {
+        resize: both;
+    }
+    .panel:nth-child(1) {
+        grid-row: span 1;
+    }
+    .panel:nth-child(2) {
+        grid-column: span 2;
+    }
+    .panel:nth-child(3) {
+        grid-column: span 2;
+    }
+    .panel:nth-child(5) {
+        grid-row: span 2;
+    }
+    .panel:nth-child(10) {
+        grid-column: span 3;
+    }
+}
