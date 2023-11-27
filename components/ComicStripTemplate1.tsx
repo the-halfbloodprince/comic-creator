@@ -4,7 +4,7 @@ import './ComicStripTemplate1.css'
 
 type Props = {}
 
-const ComicStripTemplate1: FC<Props> = () => {
+const ComicStripTemplate1: FC<Props> = async () => {
 
   const numOfPanels = 10
 
@@ -28,8 +28,9 @@ const ComicStripTemplate1: FC<Props> = () => {
             '
         >
             {
-                Array.from({length: numOfPanels}, (_, i) => i+1)
-                    .map(i => <Panel key={i} />)
+                Array
+                  .from({length: numOfPanels}, (_, i) => i+1)
+                  .map(i => <Panel key={i} />)
             }
         </div>
     </div>

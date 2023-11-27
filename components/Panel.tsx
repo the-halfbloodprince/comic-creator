@@ -33,7 +33,7 @@ type Props = {}
 //     }
 // }
 
-const Panel = (props: Props) => {
+const Panel: FC<Props> = () => {
 
     const {
         requestState,
@@ -50,6 +50,8 @@ const Panel = (props: Props) => {
 
     // requestState = 3
 
+    const defaultImageSrc = 'https://images.pexels.com/photos/3671144/pexels-photo-3671144.jpeg?auto=compress&cs=tinysrgb&w=600'
+
     // bg-[url(https://images.pexels.com/photos/19031635/pexels-photo-19031635/free-photo-of-a-window-with-a-reflection-of-trees-and-water.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1)]
 
     return (
@@ -59,11 +61,11 @@ const Panel = (props: Props) => {
                 h-72 lg:h-96
                 border-4 border-black
                 bg-white
-                bg-url(${generated_image_src ? generated_image_src : ""})
+                bg-url(${generated_image_src ? generated_image_src : defaultImageSrc})
             `}
         >
             <img 
-                src={generated_image_src} 
+                src={data ? generated_image_src : defaultImageSrc } 
                 className={`absolute w-full h-full ${fitImage ? 'object-contain' : 'object-cover'}`} 
                 alt={data?.description}
             />
@@ -72,7 +74,7 @@ const Panel = (props: Props) => {
                     overlay
                     absolute top-0 left-0
                     w-full h-full
-                    ${data ? 'bg-black/30' : 'bg-[#222]'}
+                    bg-black/80
                     backdrop-blur-xl
                     flex flex-col
                     justify-center gap-6

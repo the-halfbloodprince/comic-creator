@@ -35,20 +35,29 @@ export default function Home() {
 
   return (
     <main className="min-h-screen">
+
+        {/* <img
+          className='absolute top-0 left-0 w-full' 
+          src="https://i.pinimg.com/736x/c8/a2/44/c8a2440ea5389260074c3b46141e3afe.jpg" 
+          alt="cover image" 
+        /> */}
+
+
         {/* details / info */}
         <div
           className='
-          py-[5rem]
-          flex flex-col
-          justify-center
-          gap-[2rem]
-          items-center
-          text-center
+            heading
+            py-[5rem]
+            flex flex-col
+            justify-center
+            gap-[2rem]
+            items-center
+            text-center
         '
         >
-          <h1 className='text-6xl'>Dashtoon AI Comic Creator</h1>
+          <h1 className='text-8xl title'>Dashtoon AI Comic Creator</h1>
           <p className='text-xl'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis quam quos, ab quis voluptatum perspiciatis.</p>
-          <a className='text-2xl py-3 px-4 border-2' href="">Start generating</a>
+          <a className='text-2xl py-3 px-8 rounded-sm border-2 hover:bg-white hover:text-black font-bold transition-all duration-500' href="#comicstrip">Start generating</a>
         </div>
 
         <div
@@ -91,7 +100,9 @@ export default function Home() {
         
 
         {/* the template / grid to show */}
-        { currentTemplate?.component }
+        <div id='comicstrip'>
+          { currentTemplate?.component }
+        </div>
 
 
         {/* error component */}
@@ -120,6 +131,8 @@ export default function Home() {
             <LoadingView /> : 
             <Input buttonOnClick={fetchData} />
         } */}
+
+        <div></div>
 
     </main>
   )

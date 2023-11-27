@@ -46,7 +46,7 @@ const Input: FC<Props> = ({ buttonOnClick, requestState }) => {
                     title="Generate with AI"
                     onClick={handleClick}
                 >
-                    <div className='flex items-center text-xl gap-4 font-bold text-[#42FF00]'>
+                    <div className='flex items-center text-xl gap-4 font-bold text-white'>
                         <GenerateWithAIIcon 
                             // color='#B5FF00' 
                             color='#42FF00' 
@@ -59,7 +59,7 @@ const Input: FC<Props> = ({ buttonOnClick, requestState }) => {
                     onClick={handleClick}
                     className={`${(requestState === 1 || requestState === 3) ? 'block' : 'block'}`}
                 >
-                    <div className='flex items-center text-xl gap-4 font-bold text-[#42FF00]'>
+                    <div className='flex items-center text-xl gap-4 font-bold text-white'>
                         <RegenerateIcon
                             color='#B5FF00'
                         />
