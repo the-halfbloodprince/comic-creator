@@ -25,9 +25,19 @@ export default function Home() {
   return (
     <main className="min-h-screen">
         {/* details / info */}
-        <div>
-          <h1>Dashtoon AI Studio</h1>
-          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis quam quos, eveniet est incidunt consequatur voluptatum magnam ea tempora, sapiente blanditiis error nulla quia quod. Iste ab quis voluptatum perspiciatis.</p>
+        <div
+          className='
+          h-[70dvh]
+          flex flex-col
+          justify-center
+          gap-[2rem]
+          items-center
+          text-center
+        '
+        >
+          <h1 className='text-6xl'>Dashtoon AI Studio</h1>
+          <p className='text-xl'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis quam quos, ab quis voluptatum perspiciatis.</p>
+          <a className='text-2xl py-3 px-4 border-2' href="">Start generating</a>
         </div>
 
         {/* error component */}
