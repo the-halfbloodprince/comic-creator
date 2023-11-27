@@ -14,6 +14,10 @@ import ComicStripTemplate1 from '@/components/ComicStripTemplate1'
 import ComicStripTemplate2 from '@/components/ComicStripTemplate2'
 import { TemplateInfo } from '@/types/template'
 import AnnotationsBar from '@/components/AnnotationsBar'
+import SpeechBubble from '@/components/SpeechBubble'
+import TextAnnotation from '@/components/TextAnnotation'
+import { useSelector } from 'react-redux'
+import { RootState } from '@/redux/store'
 
 const templatesAvailable: TemplateInfo[] = [
   {
@@ -33,6 +37,8 @@ export default function Home() {
   const [templateID, setTemplateID] = useState('template_1')
 
   const currentTemplate = templatesAvailable.find(template => template.id === templateID)
+
+  const annotations = useSelector((state: RootState) => state.annotations)
 
   return (
     <main className="min-h-screen">
@@ -100,7 +106,14 @@ export default function Home() {
           {/* { templateID } */}
         </div>
         
-        
+        {/* annotations */}
+        {
+          annotations.map((annotation, i) => 
+            annotation.annotationType === 'speech_bubble'
+              ? <SpeechBubble key={i} annotation={annotation} />
+              : <TextAnnotation key={i} annotation={annotation} />
+          )
+        }
 
         {/* the template / grid to show */}
         <div id='comicstrip'>

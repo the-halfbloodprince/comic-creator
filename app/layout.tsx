@@ -1,6 +1,8 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
+import { store } from '@/redux/store'
+import { Provider } from 'react-redux'
 
 export const metadata: Metadata = {
   title: 'Dashtoon AI Comic Creator',
@@ -13,8 +15,10 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
-      <body>{children}</body>
-    </html>
+    <Provider store={store}>
+      <html lang="en">
+        <body>{children}</body>
+      </html>
+    </Provider>
   )
 }
