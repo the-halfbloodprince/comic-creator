@@ -13,6 +13,7 @@
     }
     .panel:nth-child(5) {
         grid-row: span 2;
+        height: auto;
     }
     .panel:nth-child(10) {
         grid-column: span 3;

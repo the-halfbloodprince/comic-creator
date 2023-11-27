@@ -12,7 +12,7 @@ const ErrorView: FC<Props> = ({
         <div>
         <h1>There&apos;s an error.</h1>
         {/* <button>Retry</button> */}
-        <details>
+        <details className='max-h-16 overflow-scroll'>
             <summary>See error</summary>
             <p>{JSON.stringify(error)}</p>
         </details>

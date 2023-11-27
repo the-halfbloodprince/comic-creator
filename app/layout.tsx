@@ -5,7 +5,7 @@ import './globals.css'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Dashtoon AI Studio',
+  title: 'Dashtoon AI Comic Creator',
   description: 'Create your own comics using our awesome Generative AI',
 }
 

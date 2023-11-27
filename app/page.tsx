@@ -29,18 +29,9 @@ const templatesAvailable: TemplateInfo[] = [
 
 export default function Home() {
 
-  const {
-    isLoading,
-    data,
-    error,
-    fetchData
-  } = useFetchData()
-
   const [templateID, setTemplateID] = useState('template_1')
 
   const currentTemplate = templatesAvailable.find(template => template.id === templateID)
-
-  const generated_image_src = data ? URL.createObjectURL(data.image_blob) : ""
 
   return (
     <main className="min-h-screen">
@@ -55,7 +46,7 @@ export default function Home() {
           text-center
         '
         >
-          <h1 className='text-6xl'>Dashtoon AI Studio</h1>
+          <h1 className='text-6xl'>Dashtoon AI Comic Creator</h1>
           <p className='text-xl'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis quam quos, ab quis voluptatum perspiciatis.</p>
           <a className='text-2xl py-3 px-4 border-2' href="">Start generating</a>
         </div>
