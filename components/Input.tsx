@@ -1,6 +1,6 @@
 import GenerateWithAIIcon from '@/icons/GenerateWithAI';
 import RegenerateIcon from '@/icons/RegenerateIcon';
-import React, {FC, MouseEventHandler, useState} from 'react'
+import React, { FC, useState } from 'react'
 
 type Props = {
     buttonOnClick: Function;
@@ -36,8 +36,7 @@ const Input: FC<Props> = ({ buttonOnClick, requestState }) => {
                 }}
                 className='
                     text-black
-                    w-5/6
-                    px-3 py-2
+                    w-5/6 px-3 py-2
                     outline-none
                     border-2 rounded-xl
                 '
@@ -51,7 +50,6 @@ const Input: FC<Props> = ({ buttonOnClick, requestState }) => {
                 >
                     <div className='flex items-center text-xl gap-4 font-bold text-white'>
                         <GenerateWithAIIcon 
-                            // color='#B5FF00' 
                             color='#42FF00' 
                         /> 
                         <p>Generate</p>

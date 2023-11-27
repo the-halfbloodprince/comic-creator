@@ -1,4 +1,4 @@
-import React, { FC, useRef } from 'react';
+import React, { FC } from 'react';
 import Image from 'next/image'
 
 type Props = {
@@ -10,8 +10,7 @@ const DataView: FC<Props> = ({
 	generated_image_src,
     generated_image_description
 }) => {
-	const imageRef = useRef<HTMLImageElement>(null);
-
+	
 	return (
 		<div>
             <Image 
@@ -20,7 +19,6 @@ const DataView: FC<Props> = ({
                 width={512}
                 height={512}
             />
-			{/* <Input buttonOnClick={fetchData} /> */}
 		</div>
 	);
 };

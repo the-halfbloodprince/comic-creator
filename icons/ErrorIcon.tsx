@@ -1,8 +1,8 @@
-import React from 'react'
+import React, { FC } from 'react'
 
 type Props = {}
 
-const ErrorIcon = (props: Props) => {
+const ErrorIcon: FC<Props> = () => {
   return (
     <svg width="64" height="64" viewBox="0 0 365 387" fill="none" xmlns="http://www.w3.org/2000/svg">
         <g clipPath="url(#clip0_102_2)">

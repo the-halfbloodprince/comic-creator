@@ -1,5 +1,5 @@
 import React, { FC } from 'react'
-import { CirclesWithBar, MutatingDots, Triangle } from 'react-loader-spinner'
+import { CirclesWithBar } from 'react-loader-spinner'
 
 type Props = {
     cancelFunction: Function;
@@ -30,7 +30,12 @@ const LoadingView: FC<Props> = ({ cancelFunction }) => {
                 visible={true}
             /> */}
 
-            <button className='text-xl bg-red-600 px-4 py-3 rounded-lg hover:bg-red-800' onClick={() => cancelFunction()}>Cancel</button>
+            <button 
+                className='text-xl bg-red-600 px-4 py-3 rounded-lg hover:bg-red-800' 
+                onClick={() => cancelFunction()}
+            >
+                Cancel
+            </button>
         </div>
     )
 }

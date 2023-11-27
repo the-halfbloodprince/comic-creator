@@ -1,8 +1,8 @@
-import React from 'react'
+import React, { FC } from 'react'
 
 type Props = {}
 
-const AnnotationsBar = (props: Props) => {
+const AnnotationsBar: FC<Props> = () => {
   return (
     <div 
         className='

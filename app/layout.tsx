@@ -1,11 +1,13 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { Dosis } from 'next/font/google'
 import './globals.css'
 
 export const metadata: Metadata = {
   title: 'Dashtoon AI Comic Creator',
   description: 'Create your own comics using our awesome Generative AI',
 }
+
+const dosis = Dosis({ subsets: ['latin'] })
 
 export default function RootLayout({
   children,
@@ -14,7 +16,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body className={dosis.className}>{children}</body>
     </html>
   )
 }
