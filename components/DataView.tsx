@@ -17,6 +17,8 @@ const DataView: FC<Props> = ({
             <Image 
                 src={generated_image_src}
                 alt={generated_image_description ? generated_image_description : "AI generated image"}
+                width={512}
+                height={512}
             />
 			{/* <img
 				ref={imageRef}
