@@ -5,59 +5,11 @@ import axios from 'axios'
 import { useRef, useState, MouseEventHandler } from 'react'
 
 import Input from '@/components/Input'
+import LoadingView from '@/components/LoadingView'
+import DataView from '@/components/DataView'
+import ErrorView from '@/components/ErrorView'
 
-import { useFetchData } from '../hooks/fetchData'
-
-const DataView = ({
-  generated_image_src,
-  // fetchData
-}: {
-  generated_image_src: string,
-  // fetchData: Function
-}) => {
-
-  const imageRef = useRef<HTMLImageElement>(null)
-
-  return (
-    <div>
-      <img 
-        ref={imageRef} 
-        id='generated-image' 
-        src={generated_image_src} alt="" 
-      />
-      {/* <Input buttonOnClick={fetchData} /> */}
-    </div>
-  )
-}
-
-const ErrorView = ({ 
-  error,
-  // fetchData 
-}: {
-  error: any,
-  // fetchData: Function
-}) => {
-
-  return (
-    <div>
-      <h1>There&apos;s an error.</h1>
-      <details>
-        <summary>See error</summary>
-        <p>{JSON.stringify(error)}</p>
-      </details>
-      {/* <Input buttonOnClick={fetchData} /> */}
-    </div>
-  )
-
-}
-
-const LoadingView = () => {
-  return (
-    <div>
-      Loading...
-    </div>
-  )
-}
+import { useFetchData } from '@/hooks/fetchData'
 
 export default function Home() {
 
@@ -68,7 +20,7 @@ export default function Home() {
     fetchData
   } = useFetchData()
 
-  const generated_image_src = data ? URL.createObjectURL(data) : ""
+  const generated_image_src = data ? URL.createObjectURL(data.image_blob) : ""
 
   return (
     <main className="min-h-screen">
@@ -92,8 +44,8 @@ export default function Home() {
         {
           data && (
             <DataView 
-              generated_image_src={generated_image_src} 
-              // fetchData={fetchData}  
+              generated_image_src={generated_image_src}
+              generated_image_description={data.description}
             />
           )
         }
@@ -105,12 +57,6 @@ export default function Home() {
             <Input buttonOnClick={fetchData} />
         }
 
-        {/* <div>
-          {isLoading && "loading.."}
-          {isFetching && "fetching.."}
-          {error && `${error.message}`}
-          {data && `${JSON.stringify(data)}`}
-        </div> */}
     </main>
   )
 }

@@ -11,10 +11,15 @@ import { defaultComicGeneratorAPIConfig } from '../configs/axiosConfigs'
 
 type RequestState = 0 | 1 | 2
 
+type ImageData = {
+    image_blob: Blob;
+    description: string;
+}
+
 export const useFetchData = () => {
 
     const [requestState, setRequestState] = useState<RequestState>(0)
-    const [data, setData] = useState(null)
+    const [data, setData] = useState<ImageData | null>(null)
     const [error, setError] = useState<any>(null)
 
     const isLoading = requestState === 1
@@ -33,7 +38,11 @@ export const useFetchData = () => {
                     inputs: inputText
                 }
             })
-            const data = res.data
+            const data = {
+                image_blob: res.data,
+                description: inputText
+            }
+            // const data = res.data
             setData(data)
             setRequestState(0)
             console.log('setted data')
