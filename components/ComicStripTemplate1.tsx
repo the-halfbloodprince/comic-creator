@@ -10,10 +10,10 @@ const ComicStripTemplate1: FC<Props> = async () => {
 
   return (
     <div className='w-full px-auto'>
-        <h3
+        {/* <h3
           className='text-center text-2xl my-3 w-fit mx-auto px-2'
           contentEditable
-        >Template 1</h3>
+        >Template 1</h3> */}
         <div
             className='
                 w-full max-w-6xl mx-auto

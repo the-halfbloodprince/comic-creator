@@ -31,6 +31,9 @@ const Input: FC<Props> = ({ buttonOnClick, requestState }) => {
                 type="text" 
                 value={inputText} 
                 onChange={(e) => setInputText(e.target.value)}
+                onKeyDown={(e) => {
+                    if (e.key === 'Enter') buttonOnClick(inputText)
+                }}
                 className='
                     text-black
                     w-5/6

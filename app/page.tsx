@@ -13,6 +13,7 @@ import { useFetchData } from '@/hooks/fetchData'
 import ComicStripTemplate1 from '@/components/ComicStripTemplate1'
 import ComicStripTemplate2 from '@/components/ComicStripTemplate2'
 import { TemplateInfo } from '@/types/template'
+import AnnotationsBar from '@/components/AnnotationsBar'
 
 const templatesAvailable: TemplateInfo[] = [
   {
@@ -56,7 +57,9 @@ export default function Home() {
         '
         >
           <h1 className='text-8xl title'>Dashtoon AI Comic Creator</h1>
-          <p className='text-xl'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis quam quos, ab quis voluptatum perspiciatis.</p>
+          <p className='text-2xl w-3/4'>
+            Create your AI generated Comic Strips using the available templates. This was created by <a href="https://github.com/the-halfbloodprince">Manish Kumar Das (the-halfbloodprince)</a>  as a task for Product Engineer role at Dashtoon
+          </p>
           <a className='text-2xl py-3 px-8 rounded-sm border-2 hover:bg-white hover:text-black font-bold transition-all duration-500' href="#comicstrip">Start generating</a>
         </div>
 
@@ -133,6 +136,10 @@ export default function Home() {
         } */}
 
         <div></div>
+
+        <h3 className='text-center mt-24 text-5xl credits'>Built by <a href="https://github.com/the-halfbloodprince" target='_blank'>Manish Kumar Das</a></h3>
+
+        <AnnotationsBar />
 
     </main>
   )

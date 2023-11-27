@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Raleway:wght@300;400;500;600;700&family=Vina+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Dosis:wght@200;300;400;500&family=Poppins:wght@300;400;500&family=Raleway:wght@300;400;500;600;700&family=Vina+Sans&display=swap');
 
 :root {
   --foreground-rgb: 0, 0, 0;
@@ -49,9 +49,16 @@ html {
 body {
   padding: 2rem;
   width: 100%;
-  font-family: 'Raleway', sans-serif;
+  /* font-family: 'Poppins', sans-serif; */
+  padding-bottom: 10rem;
   /* background: url(https://i.pinimg.com/736x/c8/a2/44/c8a2440ea5389260074c3b46141e3afe.jpg) top no-repeat, linear-gradient(to top, #000f, #0000);
   background-size: 100%; */
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  font-style: inherit;
 }
 
 .heading {
@@ -62,4 +69,12 @@ body {
 .title {
   /* font-family: 'Vina Sans', sans-serif; */
   font-family: 'Bebas Neue', sans-serif;
+}
+
+.credits {
+  font-family: 'Bebas Neue', sans-serif;
+}
+
+.credits > a {
+  color: #6a26cd;
 }
